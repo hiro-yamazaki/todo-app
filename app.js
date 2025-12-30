@@ -117,7 +117,7 @@ class TodoApp {
     updateCount() {
         const activeCount = this.todos.filter(todo => !todo.completed).length;
         const totalCount = this.todos.length;
-        this.countEl.textContent = `${activeCount} / ${totalCount} 件のタスク`;
+        this.countEl.textContent = `${activeCount} of ${totalCount} tasks`;
     }
 
     // Todo項目のHTML要素を作成
@@ -165,10 +165,10 @@ class TodoApp {
             const emptyMsg = document.createElement('li');
             emptyMsg.className = 'empty-message';
             emptyMsg.textContent = this.currentFilter === 'all'
-                ? 'タスクがありません。新しいタスクを追加しましょう！'
+                ? 'No tasks yet'
                 : this.currentFilter === 'active'
-                    ? '未完了のタスクはありません'
-                    : '完了したタスクはありません';
+                    ? 'No active tasks'
+                    : 'No completed tasks';
             this.list.appendChild(emptyMsg);
         } else {
             filteredTodos.forEach(todo => {

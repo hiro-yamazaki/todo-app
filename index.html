@@ -8,30 +8,30 @@
 </head>
 <body>
     <div class="container">
-        <h1>📝 Todo App</h1>
+        <h1>Todo</h1>
 
         <form id="todo-form" class="todo-form">
             <input
                 type="text"
                 id="todo-input"
-                placeholder="新しいタスクを入力..."
+                placeholder="Add a task..."
                 autocomplete="off"
                 required
             >
-            <button type="submit">追加</button>
+            <button type="submit">Add</button>
         </form>
 
         <div class="filters">
-            <button class="filter-btn active" data-filter="all">すべて</button>
-            <button class="filter-btn" data-filter="active">未完了</button>
-            <button class="filter-btn" data-filter="completed">完了</button>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Done</button>
         </div>
 
         <ul id="todo-list" class="todo-list"></ul>
 
         <div class="todo-footer">
-            <span id="todo-count">0 件のタスク</span>
-            <button id="clear-completed" class="clear-btn">完了済みを削除</button>
+            <span id="todo-count">0 tasks</span>
+            <button id="clear-completed" class="clear-btn">Clear done</button>
         </div>
     </div>
 
